@@ -6,4 +6,16 @@
   body {
     @apply bg-black text-white;
   }
+  * {
+    scrollbar-width: 6px;
+  }
+  ::-webkit-scrollbar {
+    @apply w-3;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-800 hover:bg-gray-700 rounded-full border-solid border-4 border-black;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-black;
+  }
 }
