@@ -9,7 +9,7 @@ export default function ara() {
   return (
     <PageSection>
       <header className="pt-8 flex flex-col">
-        <NavBar animate={true} />
+        <NavBar />
         <motion.h1
           initial={{ filter: "blur(20px)", opacity: 0 }}
           animate={{ filter: "blur(0px)", opacity: 1 }}

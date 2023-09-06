@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <PageSection>
       <header className="h-[100dvh] py-8 grid grid-rows-[auto_1fr_auto]">
-        <NavBar animate={true} />
+        <NavBar />
         <Hero />
         <ScrollDown />
       </header>
