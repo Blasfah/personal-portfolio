@@ -8,42 +8,54 @@ import { motion } from "framer-motion"
 export default function ara() {
   return (
     <PageSection>
-      <header className="pt-8 flex flex-col">
+      <header className="pt-4 lg:pt-8 flex flex-col">
         <NavBar />
-        <motion.h1
-          initial={{ filter: "blur(20px)", opacity: 0 }}
-          animate={{ filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 0.75 }}
-          className="text-8xl font mt-48"
-        >
-          ARA Website
-        </motion.h1>
-        <section className="grid grid-cols-3 gap-8 text-2xl mt-28">
-          <CaseDetail top="Role" bottom="Frontend Development" delay={0} />
-          <CaseDetail top="Company" bottom="ARA" delay={0.25} />
-          <CaseDetail top="Year" bottom="2023" delay={0.5} />
-        </section>
+        <div className="h-[80dvh] flex flex-col justify-evenly py-8 lg:py-16">
+          <motion.h1
+            initial={{ filter: "blur(20px)", opacity: 0 }}
+            animate={{ filter: "blur(0px)", opacity: 1 }}
+            transition={{ duration: 0.75 }}
+            className="text-[clamp(2rem,12vw,6rem)] font"
+          >
+            ARA Website
+          </motion.h1>
+          <section className="grid grid-rows-3 lg:grid-rows-1 grid-cols-1 lg:grid-cols-3 gap-8 text-2xl">
+            <CaseDetail top="Role" bottom="Frontend Development" delay={0} />
+            <CaseDetail top="Company" bottom="ARA" delay={0.25} />
+            <CaseDetail top="Year" bottom="2023" delay={0.5} />
+          </section>
+        </div>
       </header>
-      <motion.picture
-        initial={{ filter: "blur(20px)", opacity: 0, y: 200 }}
-        animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, delay: 0.75, ease: "anticipate" }}
-        className="mt-36 block aspect-[2/1] w-full relative"
-      >
-        <a href="ara.nl">
+      <picture>
+        <motion.a
+          initial={{ filter: "blur(20px)", opacity: 0, y: 200 }}
+          animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+          transition={{ duration: 1.5, delay: 0.75, ease: "anticipate" }}
+          className="block aspect-[2/1] relative overflow-hidden group rounded-xl"
+          href="https://www.ara.nl/nl"
+        >
           <Image
-            className="object-cover rounded-lg"
+            className="object-cover group-hover:scale-105 duration-300 transition-transform"
             src="/images/ara.jpg"
             fill={true}
+            alt="ara website"
           />
-        </a>
-      </motion.picture>
-      <section className="my-32">
-        <h2>Dialoge</h2>
-        <p>
-          When i was an inter at ARA, one of my favorite projects that i had the
-          pleasure to work on was their own portfolio website. I've made many
-          components on this website, like the image gallery and the text
+        </motion.a>
+        <motion.p
+          initial={{ filter: "blur(20px)", opacity: 0 }}
+          animate={{ filter: "blur(0px)", opacity: 1 }}
+          transition={{ duration: 0.75, delay: 2 }}
+          className="text-right text-gray-500 mt-4"
+        >
+          Click to visit
+        </motion.p>
+      </picture>
+      <section className="mt-32">
+        <h2 className="text-3xl">My Experience</h2>
+        <p className="text-gray-500 mt-6 max-w-3xl">
+          When i was an intern at ARA, one of my favorite projects that i had
+          the pleasure to work on was their own portfolio website. I've made
+          many components on this website, like the image gallery and the text
           component on the case pages
         </p>
       </section>
@@ -53,7 +65,7 @@ export default function ara() {
 
 function CaseDetail({ top, bottom, delay }) {
   return (
-    <div className="flex flex-col gap-4">
+    <div className="flex flex-col gap-2 lg:gap-4">
       <motion.p
         initial={{ filter: "blur(20px)", opacity: 0 }}
         animate={{ filter: "blur(0px)", opacity: 1 }}

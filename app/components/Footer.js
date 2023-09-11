@@ -4,22 +4,33 @@ import Svg from "./Svg"
 
 export default function Footer() {
   return (
-    <footer className="pt-16 pb-8 border-t border-gray-900 mt-32">
+    <footer className="pt-20 pb-8 border-t border-gray-900 mt-32">
       <PageSection>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-y-16">
           <div className="flex flex-col">
             <p className="text-3xl">Socials</p>
             <div className="text-gray-500 mt-6 text-xl">
-              <p>Github</p>
-              <p>LinkedIn</p>
-              <p>Codepen</p>
+              <a
+                href="https://github.com/Blasfah?tab=repositories"
+                target="_blank"
+                className="block hover:text-white transition-colors w-fit"
+              >
+                Github
+              </a>
+              <a
+                href="https://www.linkedin.com/in/wouter-kuijt-b720a2225/"
+                target="_blank"
+                className="block hover:text-white transition-colors w-fit"
+              >
+                LinkedIn
+              </a>
             </div>
           </div>
           <div className="flex flex-col">
             <p className="text-3xl">Contact</p>
             <div className="text-gray-500 mt-6 text-xl">
               <p>Wouterkuyt@gmail.com</p>
-              <p>+31 33136786</p>
+              <p>+31 6 33 13 67 86</p>
             </div>
           </div>
         </div>

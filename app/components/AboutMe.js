@@ -5,7 +5,7 @@ export default function AboutMe() {
   return (
     <section className="py-8 mt-24">
       <h2 className="text-5xl">About Me</h2>
-      <div className="text-lg text-gray-500 mt-10 max-w-2xl flex flex-col gap-6">
+      <div className="text-lg text-gray-500 mt-10 max-w-3xl flex flex-col gap-6">
         <p>
           I'm frontend developer based in the Netherlands with a passion for
           precision and design. I specialize in crafting visually appealing

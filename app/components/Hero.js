@@ -4,8 +4,8 @@ import { motion } from "framer-motion"
 
 export default function Hero() {
   return (
-    <div className="flex items-center my-8 relative overflow-hidden">
-      <h1 className="text-6xl flex flex-col text-stroke leading-snug px-16">
+    <div className="flex items-center my-4 lg:my-8 relative overflow-hidden">
+      <h1 className="text-[clamp(2rem,4vw,3.75rem)] flex flex-col text-stroke leading-snug px-4 xs:px-8 lg:px-16">
         <motion.p
           initial={{ filter: "blur(20px)", opacity: 0 }}
           animate={{ filter: "blur(0px)", opacity: 1 }}

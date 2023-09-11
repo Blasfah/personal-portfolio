@@ -5,7 +5,7 @@ export default function SelectedWorks() {
     <section className="py-8 mt-24">
       <h2 className="text-5xl">Selected Works</h2>
       <div className="mt-10">
-        <ul className="divide-y border-y border-gray-900 divide-gray-900">
+        <ul className="divide-y border-y border-x xs:border-x-0 border-gray-900 divide-gray-900">
           <ShowcaseItem
             href="/work/ara"
             title="ARA"
@@ -41,12 +41,15 @@ function ShowcaseItem({ title, position, year, href }) {
     <li className="text-2xl">
       <Link
         href={href}
-        className="p-6 grid grid-cols-[1fr_1fr_auto] items-center hover:bg-gray-950 transition-color duration-300 relative overflow-hidden group"
+        className="p-6 flex flex-col xs:grid grid-rows-2 lg:grid-rows-1 grid-cols-[1fr_auto] lg:grid-cols-[1fr_1fr_auto] xs:items-center hover:bg-gray-200 hover:text-black duration-300 relative overflow-hidden"
       >
-        <div className="group-hover:bg-blue-500 w-[15vw] h-3 blur-3xl absolute top-0 left-0 transition-color duration-300"></div>
-        <p className="z-10">{title}</p>
-        <p className="text-lg text-gray-500">{position}</p>
-        <p className="text-lg text-gray-500">{year}</p>
+        <p className="row-start-1">{title}</p>
+        <p className="text-lg row-start-2 lg:row-start-1 text-gray-500">
+          {position}
+        </p>
+        <p className="text-lg xs:row-start-2 lg:row-start-1 text-gray-500">
+          {year}
+        </p>
       </Link>
     </li>
   )
