@@ -10,7 +10,7 @@ export default function ara() {
     <PageSection>
       <header className="pt-4 lg:pt-8 flex flex-col">
         <NavBar />
-        <div className="h-[80dvh] flex flex-col justify-evenly py-8 lg:py-16">
+        <div className="h-[80svh] flex flex-col justify-evenly py-8 lg:py-16">
           <motion.h1
             initial={{ filter: "blur(20px)", opacity: 0 }}
             animate={{ filter: "blur(0px)", opacity: 1 }}
