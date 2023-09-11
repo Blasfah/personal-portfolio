@@ -1,8 +1,8 @@
 "use client"
 
-import Image from "next/image"
 import { motion } from "framer-motion"
 import Link from "next/link"
+import Svg from "./Svg"
 
 export default function NavBar() {
   return (
@@ -13,13 +13,7 @@ export default function NavBar() {
       className="flex justify-between items-center"
     >
       <Link href="/#">
-        <Image
-          className="select-none"
-          src="/logo.svg"
-          width={32}
-          height={32}
-          alt="logo"
-        />
+        <Svg name="logo" width={32} height={32} />
       </Link>
       <div className="flex text-lg gap-2 items-center">
         <p>Wouter Kuyt</p>

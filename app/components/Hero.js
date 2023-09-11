@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 export default function Hero() {
   return (
     <div className="flex items-center my-8 relative overflow-hidden">
-      <h1 className="text-6xl flex flex-col text-stroke leading-snug">
+      <h1 className="text-6xl flex flex-col text-stroke leading-snug px-16">
         <motion.p
           initial={{ filter: "blur(20px)", opacity: 0 }}
           animate={{ filter: "blur(0px)", opacity: 1 }}
