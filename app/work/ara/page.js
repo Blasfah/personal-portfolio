@@ -28,14 +28,25 @@ export default function ara() {
         initial={{ filter: "blur(20px)", opacity: 0, y: 200 }}
         animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
         transition={{ duration: 1.5, delay: 0.75, ease: "anticipate" }}
-        className="mt-36 block aspect-video w-full relative"
+        className="mt-36 block aspect-[2/1] w-full relative"
       >
-        <Image
-          className="object-cover rounded-lg"
-          src="/images/ara.jpg"
-          fill={true}
-        />
+        <a href="ara.nl">
+          <Image
+            className="object-cover rounded-lg"
+            src="/images/ara.jpg"
+            fill={true}
+          />
+        </a>
       </motion.picture>
+      <section className="my-32">
+        <h2>Dialoge</h2>
+        <p>
+          When i was an inter at ARA, one of my favorite projects that i had the
+          pleasure to work on was their own portfolio website. I've made many
+          components on this website, like the image gallery and the text
+          component on the case pages
+        </p>
+      </section>
     </PageSection>
   )
 }

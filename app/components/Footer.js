@@ -6,12 +6,21 @@ export default function Footer() {
   return (
     <footer className="pt-16 pb-8 border-t border-gray-900 mt-32">
       <PageSection>
-        <div className="flex flex-col">
-          <p className="text-3xl">Find me on</p>
-          <div className="text-gray-500 mt-6 text-xl">
-            <p>Github</p>
-            <p>LinkedIn</p>
-            <p>Codepen</p>
+        <div className="grid grid-cols-3">
+          <div className="flex flex-col">
+            <p className="text-3xl">Socials</p>
+            <div className="text-gray-500 mt-6 text-xl">
+              <p>Github</p>
+              <p>LinkedIn</p>
+              <p>Codepen</p>
+            </div>
+          </div>
+          <div className="flex flex-col">
+            <p className="text-3xl">Contact</p>
+            <div className="text-gray-500 mt-6 text-xl">
+              <p>Wouterkuyt@gmail.com</p>
+              <p>+31 33136786</p>
+            </div>
           </div>
         </div>
         <div className="grid grid-cols-[auto_1fr_auto] items-center mt-20 gap-4 text-gray-500 text-lg">

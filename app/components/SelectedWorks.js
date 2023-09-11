@@ -27,7 +27,7 @@ export default function SelectedWorks() {
           <ShowcaseItem
             href="/#"
             title="Manus Skulls"
-            position="Frontend Development"
+            position="Frontend Development / UI Design"
             year={2022}
           />
         </ul>
