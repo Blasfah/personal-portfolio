@@ -31,13 +31,14 @@ export default function ara() {
           initial={{ filter: "blur(20px)", opacity: 0, y: 200 }}
           animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
           transition={{ duration: 1.5, delay: 0.75, ease: "anticipate" }}
-          className="block aspect-[2/1] relative overflow-hidden group rounded-xl"
+          className="block aspect-square md:aspect-[2/1] relative overflow-hidden group rounded-xl"
           href="https://www.ara.nl/nl"
+          target="_blank"
         >
           <Image
             className="object-cover group-hover:scale-105 duration-300 transition-transform"
             src="/images/ara.jpg"
-            fill={true}
+            fill
             alt="ara website"
           />
         </motion.a>
@@ -50,14 +51,38 @@ export default function ara() {
           Click to visit
         </motion.p>
       </picture>
-      <section className="mt-32">
+      <section className="mt-20">
         <h2 className="text-3xl">My Experience</h2>
         <p className="text-gray-500 mt-6 max-w-3xl">
           When i was an intern at ARA, one of my favorite projects that i had
           the pleasure to work on was their own portfolio website. I've made
           many components on this website, like the image gallery and the text
-          component on the case pages
+          component on the case pages. But the scroll animation on the approach
+          page takes the cake.
         </p>
+      </section>
+      <section>
+        <div className="mt-32 flex flex-col lg:flex-row w-full gap-8">
+          <picture>
+            <Image
+              className="rounded-xl"
+              src="/gifs/approach_showcase.gif"
+              height={1905}
+              width={963}
+              alt="approach showcase gif"
+            />
+          </picture>
+          <picture>
+            <Image
+              className="rounded-xl"
+              src="/gifs/button_showcase.gif"
+              height={601}
+              width={443}
+              alt="button showcase gif"
+            />
+            <p className="text-gray-500 mt-4">Cool button animation I made!</p>
+          </picture>
+        </div>
       </section>
     </PageSection>
   )
