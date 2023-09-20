@@ -18,7 +18,7 @@ export default function Footer() {
                 Github
               </a>
               <a
-                href="https://www.linkedin.com/in/wouter-kuijt-b720a2225/"
+                href="https://www.linkedin.com/in/wouter-kuyt-b720a2225/"
                 target="_blank"
                 className="block hover:text-white transition-colors w-fit"
               >
