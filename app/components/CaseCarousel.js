@@ -22,7 +22,7 @@ export default function CaseCarousel({ slides, href }) {
                 <img
                   className="w-full object-cover"
                   src={slide.mobile}
-                  srcSet={`${slide.mobile} 640w, ${slide.desktop} 1200w`}
+                  srcSet={`${slide.mobile} 1000w, ${slide.desktop} 1920w`}
                   alt={slide.alt}
                 />
               </div>
