@@ -17,18 +17,21 @@ export default function SelectedWorks() {
             title="Experto"
             position="Frontend Development"
             year={2022}
+            disabled
           />
           <ShowcaseItem
             href="/#"
             title="Varrati"
             position="Frontend Development"
             year={2022}
+            disabled
           />
           <ShowcaseItem
             href="/#"
             title="Manus Skulls"
             position="Frontend Development / UI Design"
             year={2022}
+            disabled
           />
         </ul>
       </div>
@@ -36,14 +39,21 @@ export default function SelectedWorks() {
   )
 }
 
-function ShowcaseItem({ title, position, year, href }) {
+function ShowcaseItem({ title, position, year, href, disabled }) {
   return (
     <li className="text-2xl">
       <Link
         href={href}
         className="p-6 flex flex-col xs:grid grid-rows-2 lg:grid-rows-1 grid-cols-[1fr_auto] lg:grid-cols-[1fr_1fr_auto] xs:items-center hover:bg-gray-200 hover:text-black duration-300 relative overflow-hidden"
       >
-        <p className="row-start-1">{title}</p>
+        <div className="row-start-1 flex gap-2 items-baseline">
+          <p className={`${disabled && "text-gray-500 line-through"}`}>
+            {title}
+          </p>
+          {disabled && (
+            <span className="text-white text-lg"> Coming soon!</span>
+          )}
+        </div>
         <p className="text-lg row-start-2 lg:row-start-1 text-gray-500">
           {position}
         </p>

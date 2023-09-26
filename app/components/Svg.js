@@ -110,5 +110,19 @@ export default function Svg({ name, width, height }) {
           <path d="M0 0h14v7H7zm0 7h7l7 7H7v7l-7-7z" fill="currentColor"></path>
         </svg>
       )
+    case "outside-link":
+      return (
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height={height}
+          viewBox="0 -960 960 960"
+          width={width}
+        >
+          <path
+            d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"
+            fill="currentColor"
+          />
+        </svg>
+      )
   }
 }

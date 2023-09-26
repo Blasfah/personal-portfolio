@@ -2,89 +2,46 @@
 
 import PageSection from "@/app/components/PageSection"
 import NavBar from "@/app/components/NavBar"
-import Image from "next/image"
 import { motion } from "framer-motion"
+import CaseCarousel from "@/app/components/CaseCarousel"
 
 export default function ara() {
   return (
-    <PageSection>
-      <header className="pt-4 lg:pt-8 flex flex-col">
-        <NavBar />
-        <div className="h-[80svh] flex flex-col justify-evenly py-8 lg:py-16">
-          <motion.h1
-            initial={{ filter: "blur(20px)", opacity: 0 }}
-            animate={{ filter: "blur(0px)", opacity: 1 }}
-            transition={{ duration: 0.75 }}
-            className="text-[clamp(2rem,12vw,6rem)] font"
-          >
-            ARA Website
-          </motion.h1>
-          <section className="grid grid-rows-3 lg:grid-rows-1 grid-cols-1 lg:grid-cols-3 gap-8 text-2xl">
-            <CaseDetail top="Role" bottom="Frontend Development" delay={0} />
-            <CaseDetail top="Company" bottom="ARA" delay={0.25} />
-            <CaseDetail top="Year" bottom="2023" delay={0.5} />
-          </section>
-        </div>
-      </header>
-      <picture>
-        <motion.a
-          initial={{ filter: "blur(20px)", opacity: 0, y: 200 }}
-          animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
-          transition={{ duration: 1.5, delay: 0.75, ease: "anticipate" }}
-          className="block aspect-square md:aspect-[2/1] relative overflow-hidden group rounded-xl"
-          href="https://www.ara.nl/nl"
-          target="_blank"
-        >
-          <Image
-            className="object-cover group-hover:scale-105 duration-300 transition-transform"
-            src="/images/ara.jpg"
-            fill
-            alt="ara website"
-          />
-        </motion.a>
-        <motion.p
-          initial={{ filter: "blur(20px)", opacity: 0 }}
-          animate={{ filter: "blur(0px)", opacity: 1 }}
-          transition={{ duration: 0.75, delay: 2 }}
-          className="text-right text-gray-500 mt-4"
-        >
-          Click to visit
-        </motion.p>
-      </picture>
-      <section className="mt-20">
-        <h2 className="text-3xl">My Experience</h2>
-        <p className="text-gray-500 mt-6 max-w-3xl">
-          When i was an intern at ARA, one of my favorite projects that i had
-          the pleasure to work on was their own portfolio website. I've made
-          many components on this website, like the image gallery and the text
-          component on the case pages. But the scroll animation on the approach
-          page takes the cake.
-        </p>
-      </section>
-      <section>
-        <div className="mt-32 flex flex-col lg:flex-row w-full gap-8">
-          <picture>
-            <Image
-              className="rounded-xl"
-              src="/gifs/approach_showcase.gif"
-              height={1905}
-              width={963}
-              alt="approach showcase gif"
-            />
-          </picture>
-          <picture>
-            <Image
-              className="rounded-xl"
-              src="/gifs/button_showcase.gif"
-              height={601}
-              width={443}
-              alt="button showcase gif"
-            />
-            <p className="text-gray-500 mt-4">Cool button animation I made!</p>
-          </picture>
-        </div>
-      </section>
-    </PageSection>
+    <>
+      <PageSection>
+        <header className="pt-4 lg:pt-8 flex flex-col">
+          <NavBar />
+          <div className="h-[75svh] flex flex-col justify-evenly py-8 lg:py-16">
+            <motion.h1
+              initial={{ filter: "blur(20px)", opacity: 0 }}
+              animate={{ filter: "blur(0px)", opacity: 1 }}
+              transition={{ duration: 0.75 }}
+              className="text-[clamp(2rem,12vw,6rem)] font"
+            >
+              ARA Website
+            </motion.h1>
+            <section className="grid grid-rows-3 lg:grid-rows-1 grid-cols-1 lg:grid-cols-3 gap-8 text-2xl">
+              <CaseDetail top="Role" bottom="Frontend Development" delay={0} />
+              <CaseDetail top="Company" bottom="ARA" delay={0.25} />
+              <CaseDetail top="Year" bottom="2023" delay={0.5} />
+            </section>
+          </div>
+        </header>
+      </PageSection>
+      <CaseCarousel
+        href="https://www.ara.nl/nl"
+        slides={[
+          {
+            mobile: "/images/ara_mobile_1.png",
+            desktop: "/images/ara_desktop_1.png",
+          },
+          {
+            mobile: "/images/ara_mobile_2.png",
+            desktop: "/images/ara_desktop_2.png",
+          },
+        ]}
+      />
+    </>
   )
 }
 

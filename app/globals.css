@@ -19,3 +19,12 @@
     @apply bg-neutral-950;
   }
 }
+
+@layer components {
+  .splide__arrows {
+    @apply hidden sm:flex gap-2;
+  }
+  .splide__arrow {
+    @apply p-2 border border-gray-900 rounded-full active:bg-gray-900 active:duration-0 duration-300;
+  }
+}
